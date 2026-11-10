@@ -5,6 +5,12 @@
 
 ---
 
+## Project Solution Pitch
+
+Read the concise one-page solution pitch for **DukaanVoice AI**: [Solution Pitch](docs/SOLUTION_PITCH.md)
+
+---
+
 ## 1. What is DukaanVoice AI?
 
 **DukaanVoice AI** is a purpose-built store operating assistant for small retail and grocery (*kirana*) shopkeepers across India. Rather than requiring shop owners to navigate complex menus, type barcode numbers on keyboards, or maintain manual paper account registers, DukaanVoice AI allows store owners to control their entire business through natural voice conversations.
