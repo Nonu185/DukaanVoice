@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Noto Sans Devanagari', 'Noto Sans Kannada', system-ui, -apple-system, sans-serif;
+    color: #18181b;
+    background-color: #faf9f6;
+  }
+
+  body {
+    background-color: #faf9f6;
+    color: #18181b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a1a1aa;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded-xl shadow-xs transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-emerald-600/20;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-50 text-stone-700 font-medium py-2 px-4 rounded-xl border border-stone-200/90 shadow-xs transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-stone-400/20;
+  }
+
+  .btn-subtle {
+    @apply inline-flex items-center justify-center gap-2 bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium py-1.5 px-3 rounded-xl transition-colors duration-150;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full px-3.5 py-2 bg-white border border-stone-200/90 rounded-xl text-stone-900 placeholder:text-stone-400 text-sm focus:outline-none focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/15 transition-colors duration-150;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl border border-stone-200/80 shadow-xs p-6;
+  }
+
+  .card-compact {
+    @apply bg-white rounded-xl border border-stone-200/80 shadow-xs p-4;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
+
+/* Print styling for receipts and statements */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, nav, aside, .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+    background: white;
+    color: black;
+  }
+}
